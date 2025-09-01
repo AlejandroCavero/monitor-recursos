@@ -10,12 +10,11 @@
 <script>
 
     async function recoger_datos() {
-        const url = "http://debian11-docker-alejandro.local:8081/monitor";
+        const url = "http://127.0.0.1:8000/monitor";
         try {
             const respuesta = await fetch(url);
 
             const json_respuesta = await respuesta.json();
-
 
             console.log(json_respuesta);
             USO_CPU = json_respuesta.uso_cpu;
@@ -24,11 +23,11 @@
             USO_DISCO = json_respuesta.uso_disco;
             LIBRE_DISCO = json_respuesta.libre_disco;
 
-            document.getElementById('uso_cpu_linux').innerHTML = USO_CPU + '%'
-            document.getElementById('uso_ram_linux').innerHTML = USO_RAM + ' GB'
-            document.getElementById('libre_ram_linux').innerHTML = LIBRE_RAM + ' GB'
-            document.getElementById('uso_disco_linux').innerHTML = USO_DISCO + ' GB'
-            document.getElementById('libre_disco_linux').innerHTML = LIBRE_DISCO + ' GB'
+            document.getElementById('uso_cpu_maquina').innerHTML = USO_CPU + '%'
+            document.getElementById('uso_ram_maquina').innerHTML = USO_RAM + ' GB'
+            document.getElementById('libre_ram_maquina').innerHTML = LIBRE_RAM + ' GB'
+            document.getElementById('uso_disco_maquina').innerHTML = USO_DISCO + ' GB'
+            document.getElementById('libre_disco_maquina').innerHTML = LIBRE_DISCO + ' GB'
 
         } catch {
             const monitorDiv = document.getElementById('MONITOR');
@@ -41,59 +40,73 @@
 
 <body>
 
-    <h1 class="titulo">Dashboard de Alejandro</h1>
+    <h1 class="titulo">Dashboard de máquinas</h1>
 
+    <!-- Formulario para añadir máquina -->
+    <div class="añadir_maquina_principal">
+    <p>Formulario para añadir nueva máquina</p>
+    <div class="añadir_maquina">
+    <form class="form_añadir_maquina">
+    <label for="nombre_maquina" class="campo_maquina">Nombre máquina: <input name="nombre_maquina" placeholder="Mete el nombre de la nueva máquina" required> </label>
+    <label for="url_maquina" class="campo_maquina">URL Máquina: <input name="url_maquina" placeholder="Ej: http://127.0.0.1:8000/monitor" required> </label>
+    <input class="boton_crear" name='boton_crear' type="submit" value="Crear Máquina" >
+    </form>
+    </div>
+    </div>
+    
+    <!-- Máquinas -->
+    
     <div id="monitor">
-        <div id="div_linux">
-            <h2 id="titulo_elementos_linux">Linux</h2>
-            <ul id="monitor_linux">
-                <!-- <a href="dashboard_linux.html" class="link_monitor_linux"> -->
+        <div id="div_maquina">
+            <h2 id="titulo_elementos_maquina">Máquina 1</h2>
+            <ul id="monitor_maquina">
+                <!-- <a href="dashboard_maquina.html" class="link_monitor_maquina"> -->
 
-                <li class="elementos_linux">
+                <li class="elementos_maquina">
                     <ul class="elemento">USO CPU</ul>
-                    <ul class="valor" id="uso_cpu_linux"></ul>
+                    <ul class="valor" id="uso_cpu_maquina"></ul>
                 </li>
-                <li class="elementos_linux">
+                <li class="elementos_maquina">
                     <ul class="elemento">USO RAM</ul>
-                    <ul class="valor" id="uso_ram_linux"></ul>
+                    <ul class="valor" id="uso_ram_maquina"></ul>
                 </li>
-                <li class="elementos_linux">
+                <li class="elementos_maquina">
                     <ul class="elemento">RAM LIBRE</ul>
-                    <ul class="valor" id="libre_ram_linux"></ul>
+                    <ul class="valor" id="libre_ram_maquina"></ul>
                 </li>
-                <li class="elementos_linux">
+                <li class="elementos_maquina">
                     <ul class="elemento">USO DISCO</ul>
-                    <ul class="valor" id="uso_disco_linux"></ul>
+                    <ul class="valor" id="uso_disco_maquina"></ul>
                 </li>
-                <li class="elementos_linux">
+                <li class="elementos_maquina">
                     <ul class="elemento">DISCO LIBRE</ul>
-                    <ul class="valor" id="libre_disco_linux"></ul>
+                    <ul class="valor" id="libre_disco_maquina"></ul>
                 </li>
             </ul>
         </div>
 
-        <div id="div_windows">
-            <h2 id="titulo_elementos_windows">Windows</h2>
-            <ul id="monitor_windows">
-                <li class="elementos_windows">
+        <div id="div_maquina2">
+            <h2 id="titulo_elementos_maquina2">Máquina 2</h2>
+            <ul id="monitor_maquina2">
+                <li class="elementos_maquina2">
                     <ul class="elemento">USO CPU</ul>
-                    <ul class="valor" id="uso_cpu_windows"></ul>
+                    <ul class="valor" id="uso_cpu_maquina2"></ul>
                 </li>
-                <li class="elementos_windows">
+                <li class="elementos_maquina2">
                     <ul class="elemento">USO RAM</ul>
-                    <ul class="valor" id="uso_ram_windows"></ul>
+                    <ul class="valor" id="uso_ram_maquina2"></ul>
                 </li>
-                <li class="elementos_windows">
+                <li class="elementos_maquina2">
                     <ul class="elemento">RAM LIBRE</ul>
-                    <ul class="valor" id="libre_ram_windows"></ul>
+                    <ul class="valor" id="libre_ram_maquina2"></ul>
                 </li>
-                <li class="elementos_windows">
+                <li class="elementos_maquina2">
                     <ul class="elemento">USO DISCO</ul>
-                    <ul class="valor" id="uso_disco_windows"></ul>
+                    <ul class="valor" id="uso_disco_maquina2"></ul>
                 </li>
-                <li class="elementos_windows">
+                <li class="elementos_maquina2">
                     <ul class="elemento">DISCO LIBRE</ul>
-                    <ul class="valor" id="libre_disco_windows"></ul>
+                    <ul class="valor" id="libre_disco_maquina2"></ul>
                 </li>
             </ul>
         </div>

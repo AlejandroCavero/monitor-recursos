@@ -1,28 +1,28 @@
-
-html{
+html {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #3A3B3C;
     color: wheat;
 }
 
-.titulo{
+.titulo {
     text-align: center;
 }
 
 #monitor {
     display: flex;
 }
+
 a {
     text-decoration: none;
     color: black;
 }
 
-#titulo_elementos_linux {
+#titulo_elementos_maquina {
     width: 100%;
     text-align: center;
 }
 
-#monitor_linux {
+#monitor_maquina {
     display: flex;
     flex-wrap: wrap;
     list-style: none;
@@ -33,8 +33,9 @@ a {
     border: 1px solid;
 }
 
-.elementos_linux {
-    width: 25%; /* 3 por fila */
+.elementos_maquina {
+    width: 25%;
+    /* 3 por fila */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -42,12 +43,12 @@ a {
     text-align: center;
 }
 
-#titulo_elementos_windows {
+#titulo_elementos_maquina2 {
     width: 100%;
     text-align: center;
 }
 
-#monitor_windows {
+#monitor_maquina2 {
     display: flex;
     flex-wrap: wrap;
     list-style: none;
@@ -57,11 +58,72 @@ a {
     border: 1px solid;
 }
 
-.elementos_windows {
-    width: 25%; /* 3 por fila */
+.elementos_maquina2 {
+    width: 25%;
+    /* 3 por fila */
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 10px;
     text-align: center;
+}
+
+/* --- ESTILOS AGREGADOS Y MODIFICADOS PARA EL FORMULARIO --- */
+.añadir_maquina_principal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 500px;
+    margin: 30px auto; /* Centra el div principal en la página */
+}
+
+.añadir_maquina_principal p {
+    margin: 0 0 10px 0;
+    font-size: 1.2em;
+    text-align: center; /* Asegura que el texto esté centrado */
+}
+
+.añadir_maquina {
+    width: 100%; /* El contenedor del formulario ocupa el ancho completo del contenedor principal */
+    border: 1px solid wheat;
+    border-radius: 25px;
+    padding: 20px;
+}
+
+.form_añadir_maquina {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.campo_maquina {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    font-size: 1em;
+}
+
+.campo_maquina input {
+    margin-top: 5px;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #555;
+    color: wheat;
+}
+
+.boton_crear {
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.boton_crear:hover {
+    background-color: #45a049;
 }

@@ -2,9 +2,9 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 import psutil
 
-app = FastAPI()
+app_monitor = FastAPI()
 
-app.add_middleware(
+app_monitor.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],  
     allow_credentials=True,
@@ -12,7 +12,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-@app.get("/monitor")
+@app_monitor.get("/monitor")
 
 async def monitor():
     #LA CPU ESTA EN % y LA MEMORIA EN GB
