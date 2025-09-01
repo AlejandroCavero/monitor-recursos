@@ -1,0 +1,67 @@
+
+html{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #3A3B3C;
+    color: wheat;
+}
+
+.titulo{
+    text-align: center;
+}
+
+#monitor {
+    display: flex;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+
+#titulo_elementos_linux {
+    width: 100%;
+    text-align: center;
+}
+
+#monitor_linux {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    width: 500px;
+    border-radius: 25px;
+    border: 1px;
+    margin: 30px;
+    border: 1px solid;
+}
+
+.elementos_linux {
+    width: 25%; /* 3 por fila */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    text-align: center;
+}
+
+#titulo_elementos_windows {
+    width: 100%;
+    text-align: center;
+}
+
+#monitor_windows {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    width: 500px;
+    border-radius: 25px;
+    margin: 30px;
+    border: 1px solid;
+}
+
+.elementos_windows {
+    width: 25%; /* 3 por fila */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    text-align: center;
+}
