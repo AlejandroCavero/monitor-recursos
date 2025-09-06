@@ -3,9 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/login.css">
     <title>Login Dashboard</title>
 </head>
+
+
 <body>
-    
+    <h1>Dashboard Login</h1>
+    <div class="div_login">
+        <form class="form_login">
+            <label for="nombre_usuario" class="campo_login">Nombre de usuario o correo: <input name="nombre_usuario" placeholder="Ingresa nombre usuario" required></label>
+            <label for="contrasena" class="campo_login">Contraseña: <input name="contrasena" placeholder="Ingresa contraseña" required> </label>
+            <input class="boton_login" name='boton_login' type="submit" value="Login" >
+            <p>Si no tienes cuenta aún <a href="#" class="boton_registrarse" onclick="pagina_registro">regístrate</a> </p>
+        </form>
+    </div>
+    <!-- Aparece cuando le das a "registro" -->
+    <form id="form_registro">
+        <label for="nombre_usuario" class="nombre_usuario">Nombre máquina: <input name="nombre_usuario" placeholder="Ingresa nombre usuario" required> </label>
+        <label for="contrasena" class="contrasena">URL Máquina: <input name="contrasena" placeholder="" required> </label>
+        <input class="boton_login" name='boton_login' type="submit" value="Login" >
+        <p>Si no tienes cuenta aún <a href="#">regístrate</a> </p>
+    </form>
 </body>
 </html>
+<script>
+    
+    function pagina_registro() {
+        let form_registro = document.getElementById('form_registro')
+    }
+
+</script>

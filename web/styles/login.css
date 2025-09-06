@@ -1,0 +1,68 @@
+html {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #3A3B3C;
+    color: wheat;
+}
+
+h1 {
+    text-align: center;
+}
+
+.div_login {
+  margin: auto;
+  width: 20%;
+  padding: 10px;
+
+}
+
+.form_login {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.campo_login {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    font-size: 1em;
+}
+
+.campo_login input {
+    margin-top: 5px;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #555;
+    color: wheat;
+}
+
+.boton_login {
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+
+
+.div_registro {
+    display: none;
+    margin: auto;
+    width: 20%;
+    padding: 10px;
+
+}
+#form_registro {
+    display: none;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+
+}
